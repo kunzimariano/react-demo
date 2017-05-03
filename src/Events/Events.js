@@ -16,11 +16,12 @@ const Events = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.events.map(event => <Event {...event} key={event.id} />)}
+          {props.data.map(event => <Event {...event} key={event.id} />)}
         </tbody>
       </table>
     </div>
   );
+
 };
 
 export default Events;
