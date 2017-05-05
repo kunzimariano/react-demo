@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 class Add extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
-
   }
+
   render() {
     return (
-      <button>Add Event</button>
+      <button onClick={this.addEvent}>Add Event</button>
     );
+  }
+
+  addEvent() {
+    browserHistory.push('/event/add');
   }
 }
 

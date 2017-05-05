@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 import './index.css';
-import { Router, browserHistory } from 'react-router';
-import routes from './routes';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById('root')
-// );
+import App from './components/App';
+import EventsPage from './components/events/EventsPage';
+import NotFound from './components/NotFound';
+
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routes} />,
+  <Router history={browserHistory}>
+    <Route path='/' component={App} >
+      <IndexRoute component={EventsPage} />
+      <Route path='events' component={EventsPage} />
+    </Route>
+    <Route path='*' component={NotFound} />
+  </Router>,
   document.getElementById('root')
 );
