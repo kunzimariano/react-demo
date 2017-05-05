@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { eventService } from './event-service';
 import Events from './Events';
-import Add from './Add';
+import AddButton from './AddButton';
 
 
 class EventsPage extends Component {
@@ -22,7 +22,7 @@ class EventsPage extends Component {
     return (
       <div>
         <Events data={this.state.events} />
-        <Add />
+        <AddButton />
       </div>
     );
   }

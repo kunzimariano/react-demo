@@ -4,7 +4,7 @@ import Event from './Event';
 const Events = (props) => {
   return (
     <div>
-      <table>
+      <table className="table table-striped">
         <thead>
           <tr>
             <th>Event Name</th>

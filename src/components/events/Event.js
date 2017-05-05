@@ -8,7 +8,7 @@ const Event = (props) => {
       <td>{props.venue.name}</td>
       <td>{props.venue.city}</td>
       <td>{props.venue.state}</td>
-      <td>Action</td>
+      <td><a href="#">Remove</a> / <a href="#">Edit</a></td>
     </tr>
   );
 };
